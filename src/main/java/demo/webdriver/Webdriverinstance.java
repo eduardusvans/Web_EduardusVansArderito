@@ -20,7 +20,7 @@ public class Webdriverinstance {
         //initialize the webdriver
         driver = new ChromeDriver(options);
         //khusus mac untuk tidak bug
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         //untuk menunggu kalau ada error tergantung dikasih waktu berapa
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //implict wait
     }

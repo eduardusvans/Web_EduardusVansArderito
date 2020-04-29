@@ -2,16 +2,15 @@ package demo.steps;
 
 import demo.pages.ArticlePage;
 import demo.pages.HomePage;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 
-public class BulbapediaStepsDefinition {
-    private ArticlePage articlePage = new ArticlePage();
+public class BulbaStepsDefinition {
     private HomePage homePage = new HomePage();
+    private ArticlePage articlePage = new ArticlePage();
+
     @Given("User open bulbapedia homepage")
     public void userOpenBulbapediaHomepage() {
         homePage.openHomePage();
@@ -22,9 +21,9 @@ public class BulbapediaStepsDefinition {
         homePage.inputSearch(keyword);
     }
 
-    @Then("User see article with title {string} on article page")
-    public void userSeeArticleWithTitleOnArticlePage(String title) {
-        String actual = articlePage.getTitle();
-        Assert.assertEquals(title, actual);
+    @Then("User see article with title {string} and Number {string} on article page")
+    public void userSeeArticleWithTitleAndNumberOnArticlePage(String title, String number) throws InterruptedException {
+        Assert.assertEquals(title, articlePage.getTitle());
+        Assert.assertEquals(number, articlePage.getPokemonNumber());
     }
 }

@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
         plugin = {"html:build/result"},
         stepNotifications = true,
         tags = {"@Web"}
+        //tags = {"@Pikachu"}
+        //tags = {"@Bulbasaur"}
+        //tags = {"@Charizard"}
 )
 public class CucumberRunner {
 }

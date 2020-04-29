@@ -10,7 +10,7 @@ public class HomePage {
         Webdriverinstance.driver.get("https://bulbapedia.bulbagarden.net/wiki/Main_Page");
     }
     public void inputSearch(String keyword){
-        WebElement inputSearch = Webdriverinstance.driver.findElement(By.id("search-box"));
-        inputSearch.sendKeys(keyword + Keys.ENTER);
+        WebElement inputSearch = Webdriverinstance.driver.findElement(By.id("searchInput"));
+        inputSearch.sendKeys(keyword, Keys.ENTER);
     }
 }
